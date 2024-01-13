@@ -1,0 +1,31 @@
+<!DOCTYPE html><link rel="stylesheet" href="/_astro/admin.7l51zh2b.css" /><main class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden"> <header class="absolute inset-x-0 z-50 py-6"> <div class="mx-auto max-w-7xl w-full px-5 sm:px-8 md:px-14 lg:px-5 undefined">  <nav class="flex justify-between gap-6"> <a href="/" class="relative flex items-center gap-3"> <img src="images/LOGO-PNG.png" alt="Admisa Group Isologo" class="w-21 h-12 trounded-xl"> <!-- <div class="inline-flex text-lg font-semibold text-center text-heading-1 top-0">
+                          Admisa Group
+                        </div> --> </a> </nav>  </div> </header> </main> <form id="adminForm" class="mt-10 mx-auto max-w-md sm:max-w-xl pt-10" method="POST"> <div class="mt-10 md:grid md:grid-cols-1"> <input type="text" id="name" name="name" placeholder="Username" class="w-full p-3 mb-3 mr-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"> <input type="password" id="password" name="password" placeholder="Password" class="w-full p-3 mt-3 ml-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"> <button class="text-center px-6 py-3 mt-3 ml-5 rounded-full outline-none relative overflow-hidden border duration-300 ease-linear after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 after:bg-[#71c3b5] bg-primary border-transparent relative after:bg-[#71c3b5] hover:border-[#71c3b5] hover:after:opacity-100 hover:after:scale-[2.5] min-w-max text-white"> <span class="text-center hidden sm:flex relative z-[5]">Go</span> <span class="flex sm:hidden relative z-[5]"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"> <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"></path> </svg> </span> </button> </div> </form> <script type="module">
+  async function submitFormEvent(event) {
+    event.preventDefault();
+
+    const form = document.getElementById("adminForm");
+    const Data = new FormData(form);
+
+    const server = "http://localhost:4000"
+
+    try {
+      const response = await fetch(`${server}/admin`, {
+        method: "POST",
+        body: Data,
+      }); 
+
+      if (response.ok) {
+        alert("form submitted");
+        form.reset();
+      } else {
+        alert("something went wrong");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
+  const form = document.getElementById("adminForm");
+  form.addEventListener("submit", submitFormEvent);
+</script>

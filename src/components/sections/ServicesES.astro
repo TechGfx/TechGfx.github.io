@@ -3,7 +3,7 @@ import Service from "../cards/Service.astro";
 import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
-import { services } from "../../utils/data";
+import { servicesES } from "../../utils/dataES";
 
 
 type ServicesProps = {
@@ -19,15 +19,15 @@ type ServicesProps = {
     <Container className="space-y-10 md:sapce-y-12">
         <div class="text-center max-w-3xl mx-auto space-y-4">
             <Title>
-                Our Services
+                Nuestros Servicios
             </Title>
             <Paragraph>
-                <span class="text-heading-4 font-bold">Admisa</span><span class="text-heading-1 font-bold"></span> Group</span> offers a wide range of administrative services that adapt to the needs of its clients.
+                <span class="text-heading-4 font-bold">Admisa</span><span class="text-heading-1 font-bold"> Group</span> ofrece una amplia gama de servicios administrativos que se adaptan a las necesidades de sus clientes.
             </Paragraph>
         </div>
         <div class="grid sm:grid-cols-4 lg:grid-cols-3 gap-6 lg:gap-8">
             {
-                    services.map((service: ServicesProps) => {
+                    servicesES.map((service: ServicesProps) => {
                     return (
                             <Service title={service.title} description={service.description} icon={service.icon}>
                             </Service>

@@ -1,4 +1,4 @@
-const services = [
+const servicesES = [
   {
     title: "Book keeping",
     description: "Systematically record, organize and maintain financial transactions and records of the business. We aim to maintain the accuracy and currency of financial records, enabling us present a well organized report.",
@@ -86,4 +86,4 @@ const services = [
 
 import * as $ from 'jquery';
 
-export { services };
+export { servicesES };

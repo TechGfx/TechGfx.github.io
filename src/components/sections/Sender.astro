@@ -1,0 +1,25 @@
+export function dataSender() {
+    function handleSubmit(event) {
+      event.preventDefault();
+  
+      const dataToSend = document.getElementById('data').value;
+  
+      // Store the data in localStorage
+      localStorage.setItem('dataToSend', dataToSend);
+  
+      // Redirect to the receiver page
+      window.location.href = '/receiver';
+    }
+  
+    return <div>
+          <h1>Sender Page</h1>
+          <form onsubmit={handleSubmit}>
+            <label for="data">Data to Send:</label>
+            <input type="text" id="data" required />
+            <input type="submit" value="Send Data" />
+          </form>
+        </div>
+    
+  }
+
+  <!-- no furula tech pfff -->

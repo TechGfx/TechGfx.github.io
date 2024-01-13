@@ -1,18 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	darkMode: "class",
 	theme: {
 		extend: {
 			colors: {
-				body: "rgb(var(--color-bg))",
-				"box-bg": "rgb(var(--color-box))",
+				body: "rgb(252, 252, 247)",
+				"box-bg": "rgb(var(--box-sd))",
 				"box-shadow": "rgb(var(--box-sd))",
 				"box-border": "rgb(var(--box-border))",
-				primary: "#1d4ed8",
-				"heading-1": "rgb(var(--heading-1))",
+				primary: "#0c5959",
+				"heading-1": "rgb(12, 89, 89)",
 				"heading-2": "rgb(var(--heading-2))",
 				"heading-3": "rgb(var(--heading-3))",
+				"heading-4": "#F0861A",
+				"heading-5": "#F0861A"
 			},
 			screens:{
 				midmd:"880px"

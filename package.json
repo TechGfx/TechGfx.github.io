@@ -3,7 +3,9 @@
   "type": "module",
   "version": "0.0.5",
   "scripts": {
+    "server": "concurrently server/server.js",
     "dev": "astro dev",
+    "indexServer": "concurrently \"npm run dev -- --host\" \"nodemon server/server.js\"",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
@@ -12,7 +14,26 @@
   "dependencies": {
     "@astrojs/tailwind": "^5.0.0",
     "@astrojs/vercel": "^6.1.2",
+    "@types/jquery": "^3.5.29",
     "astro": "^4.0.9",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "firebase": "^10.7.1",
+    "firebase-tools": "^13.0.2",
+    "mysql": "^2.18.1",
     "tailwindcss": "^3.3.3"
-  }
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.46",
+    "concurrently": "^8.2.2",
+    "jquery": "^3.7.1",
+    "nodemon": "^3.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "description": "This project is a simple Astro project that demonstrates how to use the Astro framework to create a static website. The project uses Tailwind CSS for styling and includes a simple contact form that sends emails using Nodemailer.",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
