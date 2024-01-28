@@ -53,12 +53,12 @@
 <body class="overflow-auto overflow-y-auto bg-body" data-astro-cid-sckkx6r4>
   <header class="absolute inset-x-0 z-50 py-6">
     <div class="mx-auto max-w-7xl w-full px-5 sm:px-8 md:px-14 lg:px-5 undefined">
-      <div data-nav-overlay aria-hidden="true"
+      <div data-nav-overlay aria-hidden="t"
         class="fixed hidden inset-0 lg:!hidden bg-box-bg bg-opacity-50 backdrop-filter backdrop-blur-xl"></div>
       <div data-navbar
         class="flex h-0 align-items-center overflow-auto lg:!h-auto lg:scale-y-100 duration-300 ease-linear flex-col gap-y-6 gap-x-4 lg:flex-row w-full lg:justify-between lg:items-center absolute lg:relative top-full lg:top-0 bg-body lg:bg-transparent border-x border-x-box-border lg:border-x-0">
         <nav class="flex justify-between gap-6">
-          <div class="min-w-max inline-flex"> <a href="/" class="relative flex items-center gap-3"> <img
+          <div class="min-w-max inline-flex"> <a href="/" class="relative flex items-center"> <img
                 src="../img/LOGO-PNG.png" alt="Admisa Group Isologo" class="w-21 h-12 trounded-xl"> <!-- <div class="inline-flex text-lg font-semibold text-center text-heading-1 top-0">
                           Admisa Group
                         </div> --> </a> </div>
@@ -391,8 +391,7 @@
             <h1 class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight
           font-bold text-heading-1">
               Contáctanos <span class="text-heading-4">Ahora</span> </h1>
-            <form method="POST"  action="/registro" class="mx-auto max-w-md sm:max-w-xl pt-10">
-            @csrf    
+            <form method="POST"  action="/registro" class="mx-auto max-w-md sm:max-w-xl pt-10"> 
             <input type="text"
                 placeholder="Tu Nombre" name="firstName" id="firstName"
                 class="w-full p-3 mt-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
